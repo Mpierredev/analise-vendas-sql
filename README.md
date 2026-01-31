@@ -14,4 +14,11 @@ Este projeto realiza uma Análise Exploratória de Dados em um conjunto de dados
 - **Tratamento de Dados:** Durante o projeto, foi necessário realizar a conversão de tipos (Casting) de strings para formatos de data no SQL para possibilitar a análise temporal.
 
 ## 🚀 Como Executar as Consultas
-As sentenças SQL estão organizadas no arquivo `analise_vendas.sql` deste repositório. 
+As sentenças SQL estão organizadas no arquivo `analise_vendas.sql` deste repositório.
+
+## 📁 Estrutura do Projeto
+
+- `analise_vendas.sql`: Scripts SQL com as queries de análise.
+- `retail_sales_dataset.csv`: Dataset original bruto.
+- `vendas_por_categoria.csv`: Relatório de faturamento por categoria.
+- `faturamento_mensal.csv`: Evolução das vendas ao longo do tempo.
