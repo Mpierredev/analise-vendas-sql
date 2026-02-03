@@ -13,6 +13,7 @@ Este projeto realiza uma Análise Exploratória de Dados em um conjunto de dados
 - **Equilíbrio de Gênero:** Não há uma disparidade significativa de gastos entre homens e mulheres nas categorias analisadas.
 - **Segmentação Demográfica:** Identificação de padrões de compra específicos por faixas etárias (Jovens, Adultos e Sênior) em cada categoria de produto.
 - **Tratamento de Dados:** Conversão de tipos (Casting) de strings para formatos de data no SQL, permitindo uma análise temporal precisa.
+- **Sazonalidade por Categoria:** Identificação dos meses de pico de vendas para cada vertical, permitindo estratégias de estoque mais assertivas.
 
 ## 🚀 Como Executar as Consultas
 As sentenças SQL estão organizadas no arquivo `analise_vendas.sql` na raiz deste repositório. Para reproduzir a análise, basta importar o dataset contido na pasta `/data` para o seu ambiente PostgreSQL.
@@ -26,3 +27,4 @@ As sentenças SQL estão organizadas no arquivo `analise_vendas.sql` na raiz des
   - `vendas_por_categoria.csv`: Relatório de faturamento e volume por categoria.
   - `faturamento_mensal.csv`: Evolução das vendas ao longo do tempo.
   - `segmentacao_clientes.csv`: Cruzamento de dados entre faixas etárias e categorias de produtos.
+  - `picos_venda_categoria.csv`: Relatório dos meses recordistas de faturamento por produto.
