@@ -35,3 +35,27 @@ SELECT
 FROM "retail_sales_dataset"
 GROUP BY faixa_etaria, "Product Category"
 ORDER BY faixa_etaria, total_gasto DESC;
+
+-- Identificação do mês de pico de vendas por categoria
+WITH VendasMensais AS (
+    SELECT 
+        "Product Category",
+        TO_CHAR("Date"::DATE, 'YYYY-MM') AS mes,
+        SUM("Total Amount") AS faturamento_mensal
+    FROM "retail_sales_dataset"
+    GROUP BY "Product Category", mes
+)
+SELECT 
+    "Product Category",
+    mes_pico,
+    faturamento_maximo
+FROM (
+    SELECT 
+        "Product Category",
+        mes AS mes_pico,
+        faturamento_mensal AS faturamento_maximo,
+        RANK() OVER(PARTITION BY "Product Category" ORDER BY faturamento_mensal DESC) as ranking
+    FROM VendasMensais
+) sub
+WHERE ranking = 1
+ORDER BY faturamento_maximo DESC;
