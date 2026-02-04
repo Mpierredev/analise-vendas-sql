@@ -7,7 +7,7 @@ FROM "retail_sales_dataset"
 GROUP BY "Product Category"
 ORDER BY faturamento_total DESC;
 
--- Levantamneto da média de idade por Gênero
+-- Levantamento da média de idade por Gênero
 SELECT 
     "Gender", 
     AVG("Age") AS media_idade
