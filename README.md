@@ -24,8 +24,8 @@ As sentenças SQL estão organizadas no arquivo `analise_vendas.sql` na raiz des
 - 📂 **data/**:
   - `retail_sales_dataset.csv`: Base de dados original (bruta) utilizada no projeto.
 - 📂 **outputs/**:
-  - `análise_de_comportamento_faixa_etária.csv`: Cruzamento de dados entre faixas etárias e categorias de produtos.
+  - `analise_de_comportamento_faixa_etaria.csv`: Cruzamento de dados entre faixas etárias e categorias de produtos.
   - `faturamento_formatado_por_categoria.csv`: Relatório de faturamento e volume por categoria.
-  - `análise_faturamento_mensal.csv`: Evolução das vendas ao longo do tempo.
-  - `média_de_idade_por_gênero.csv`: Distribuição da média de idade por gênero dos clientes presentes no dataset.
+  - `analise_faturamento_mensal.csv`: Evolução das vendas ao longo do tempo.
+  - `media_de_idade_por_genero.csv`: Distribuição da média de idade por gênero dos clientes presentes no dataset.
   - `pico_mensal_de_vendas_por_categoria.csv`: Relatório dos meses recordistas de faturamento por produto.
