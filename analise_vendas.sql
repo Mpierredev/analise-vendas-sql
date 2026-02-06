@@ -1,11 +1,11 @@
--- Levantamento do faturamento total por categoria
+-- Faturamento Formatado por Categoria
 SELECT 
-    "Product Category", 
-    SUM("Total Amount") AS faturamento_total,
-    COUNT(*) AS total_vendas
+    "Product Category" AS categoria,
+    COUNT("Transaction ID") AS total_vendas,
+    '$ ' || TO_CHAR(SUM("Total Amount"), '999,999.99') AS faturamento_formatado
 FROM "retail_sales_dataset"
-GROUP BY "Product Category"
-ORDER BY faturamento_total DESC;
+GROUP BY categoria
+ORDER BY SUM("Total Amount") DESC;
 
 -- Levantamento da média de idade por Gênero
 SELECT 
