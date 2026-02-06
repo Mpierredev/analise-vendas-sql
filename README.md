@@ -24,7 +24,7 @@ As sentenças SQL estão organizadas no arquivo `analise_vendas.sql` na raiz des
 - 📂 **data/**:
   - `retail_sales_dataset.csv`: Base de dados original (bruta) utilizada no projeto.
 - 📂 **outputs/**:
-  - `vendas_por_categoria.csv`: Relatório de faturamento e volume por categoria.
+  - `faturamento_formatado_por_categoria.csv`: Relatório de faturamento e volume por categoria.
   - `faturamento_mensal.csv`: Evolução das vendas ao longo do tempo.
   - `segmentacao_clientes.csv`: Cruzamento de dados entre faixas etárias e categorias de produtos.
   - `picos_venda_categoria.csv`: Relatório dos meses recordistas de faturamento por produto.
