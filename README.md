@@ -1,31 +1,39 @@
 # Análise de Vendas de Varejo com SQL (PostgreSQL)
+# 📊 Dashboard de Performance de Vendas (E-commerce Analysis)
 
-## 📌 Sobre o Projeto
-Este projeto realiza uma Análise Exploratória de Dados em um conjunto de dados de vendas de varejo retirado da plataforma Kaggle. O objetivo é identificar padrões de consumo, performance de categorias e comportamento demográfico dos clientes para gerar insights de negócio.
+Este projeto demonstra a construção de um pipeline de análise de dados ponta a ponta, utilizando **SQL (PostgreSQL)** para a extração, limpeza e transformação de dados de varejo, visando a criação de uma camada semântica para visualização em ferramentas de BI (Tableau).
+
+## 🏗️ Estrutura do Projeto
+
+O projeto foi organizado seguindo as melhores práticas de engenharia de analytics, separando a infraestrutura da análise de negócios:
+
+* **/sql_scripts**: Contém os scripts SQL organizados por ordem de execução.
+    * `01_schema.sql`: Definição da estrutura da tabela (DDL) com tipos de dados otimizados.
+    * `02_view_tableau.sql`: Criação de uma View para limpeza e cálculo de métricas (Camada Semântica).
+    * `03_business_queries.sql`: Consultas focadas em insights de negócio e faturamento.
+* **/outputs**: Relatórios exportados em CSV para consultas rápidas.
+* **/docs**: Documentação técnica e dicionário de dados.
 
 ## 🛠️ Tecnologias Utilizadas
-- **Banco de Dados:** PostgreSQL
-- **Ferramenta de Query:** DBeaver
-- **Dataset:** Retail Sales Dataset (Kaggle)
 
-## 🔍 Principais Insights Obtidos
-- **Liderança de Vendas:** A categoria de **Electronics** lidera o faturamento total ($156.905).
-- **Equilíbrio de Gênero:** Não há uma disparidade significativa de gastos entre homens e mulheres nas categorias analisadas.
-- **Segmentação Demográfica:** Identificação de padrões de compra específicos por faixas etárias (Jovens, Adultos e Sênior) em cada categoria de produto.
-- **Tratamento de Dados:** Conversão de tipos (Casting) de strings para formatos de data no SQL, permitindo uma análise temporal precisa.
-- **Sazonalidade por Categoria:** Identificação dos meses de pico de vendas para cada vertical, permitindo estratégias de estoque mais assertivas.
+* **Banco de Dados:** PostgreSQL (via DBeaver)
+* **Controle de Versão:** Git & GitHub
+* **Análise de Negócio:** SQL Avançado (Window Functions, CTEs, Aggregations)
+* **Visualização (Próximo Passo):** Tableau
 
-## 🚀 Como Executar as Consultas
-As sentenças SQL estão organizadas no arquivo `analise_vendas.sql` na raiz deste repositório. Para reproduzir a análise, basta importar o dataset contido na pasta `/data` para o seu ambiente PostgreSQL.
+## 📈 Insights Extraídos
 
-## 📁 Estrutura do Repositório
+1.  **Perfil Demográfico:** Identificação de faixas etárias dominantes e ticket médio por gênero.
+2.  **Sazonalidade:** Detecção de meses de pico de venda por categoria (Eletrônicos, Vestuário, etc).
+3.  **Performance de Produto:** Ranking de categorias mais rentáveis formatadas para relatórios executivos.
 
-- `analise_vendas.sql`: Script principal contendo todas as queries da análise.
-- 📂 **data/**:
-  - `retail_sales_dataset.csv`: Base de dados original (bruta) utilizada no projeto.
-- 📂 **outputs/**:
-  - `analise_de_comportamento_faixa_etaria.csv`: Cruzamento de dados entre faixas etárias e categorias de produtos.
-  - `faturamento_formatado_por_categoria.csv`: Relatório de faturamento e volume por categoria.
-  - `analise_faturamento_mensal.csv`: Evolução das vendas ao longo do tempo.
-  - `media_de_idade_por_genero.csv`: Distribuição da média de idade por gênero dos clientes presentes no dataset.
-  - `pico_mensal_de_vendas_por_categoria.csv`: Relatório dos meses recordistas de faturamento por produto.
+## 🚀 Como Replicar este Projeto
+
+1. Clone o repositório: `git clone https://github.com/Mpierredev/analise-vendas-sql.git`
+2. Execute o script `01_schema.sql` para criar a estrutura do banco.
+3. Importe o dataset (Kaggle Retail Sales) para a tabela `retail_sales`.
+4. Execute o script `02_view_tableau.sql` para gerar a visão limpa dos dados.
+5. Utilize os scripts em `03_business_queries.sql` para explorar os dados.
+
+---
+*Status: Em desenvolvimento (Fase de Visualização de Dados pendente).*
