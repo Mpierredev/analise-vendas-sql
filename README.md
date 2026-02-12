@@ -1,35 +1,40 @@
-# Análise de Vendas de Varejo com SQL (PostgreSQL)
-# 📊 Dashboard de Performance de Vendas (E-commerce Analysis)
+# 📊 Retail Sales Analysis: SQL + Tableau Performance Dashboard
 
-Este projeto demonstra a construção de um pipeline de análise de dados ponta a ponta, utilizando **SQL (PostgreSQL)** para a extração, limpeza e transformação de dados de varejo, visando a criação de uma camada semântica para visualização em ferramentas de BI (Tableau).
+Este repositório apresenta um projeto de **Business Intelligence** ponta a ponta. A partir de um dataset bruto de varejo, realizei a modelagem de dados via SQL para construção de uma camada analítica, culminando em um dashboard executivo no Tableau para suporte à tomada de decisão.
 
-## 🏗️ Estrutura do Projeto
+## 🚀 Estrutura do Projeto
 
-O projeto foi organizado seguindo as melhores práticas de engenharia de analytics, separando a infraestrutura da análise de negócios:
+A arquitetura foi desenhada para garantir reprodutibilidade e escalabilidade:
 
-* **/sql_scripts**: Contém os scripts SQL organizados por ordem de execução.
-    * `01_schema.sql`: Definição da estrutura da tabela (DDL) com tipos de dados otimizados.
-    * `02_view_tableau.sql`: Criação de uma View para limpeza e cálculo de métricas (Camada Semântica).
-    * `03_business_queries.sql`: Consultas focadas em insights de negócio e faturamento.
-* **/outputs**: Relatórios exportados em CSV para consultas rápidas.
-* **/docs**: Documentação técnica e dicionário de dados.
+* **/sql_scripts**: Pipeline de dados contendo o DDL para criação do schema (`01_schema.sql`), criação de Views para limpeza (`02_view_tableau.sql`) e consultas de inteligência de negócio (`03_business_queries.sql`).
+* **/tableau**: Arquivo contendo a visualização interativa (`.twbx`).
+* **/docs**: Documentação visual e prints profissionais do projeto.
+* **/outputs**: Resultados das análises exportados em CSV.
 
-## 🛠️ Tecnologias Utilizadas
+## 📂 Fonte dos Dados
+Os dados foram obtidos através do **Kaggle** (Retail Sales Dataset).
 
-* **Banco de Dados:** PostgreSQL (via DBeaver)
-* **Controle de Versão:** Git & GitHub
-* **Análise de Negócio:** SQL Avançado (Window Functions, CTEs, Aggregations)
+## 🛠️ Tecnologias e Metodologias
 
-## 📈 Insights Extraídos
+* **Banco de Dados:** PostgreSQL (Modelagem, Views e CTEs).
+* **Visualização:** Tableau Desktop Professional (Design de Dashboards e Storytelling).
+* **Versionamento:** Git & GitHub (Fluxo de trabalho seguindo boas práticas).
 
-1.  **Perfil Demográfico:** Identificação de faixas etárias dominantes e ticket médio por gênero.
-2.  **Sazonalidade:** Detecção de meses de pico de venda por categoria (Eletrônicos, Vestuário, etc).
-3.  **Performance de Produto:** Ranking de categorias mais rentáveis formatadas para relatórios executivos.
+## 📈 Dashboard e Insights de Negócio
 
-## 🚀 Como Replicar este Projeto
+O faturamento total analisado foi de **$456,000.00**, apresentando os seguintes comportamentos críticos:
 
-1. Clone o repositório: `git clone https://github.com/Mpierredev/analise-vendas-sql.git`
-2. Execute o script `01_schema.sql` para criar a estrutura do banco.
-3. Importe o dataset (Kaggle Retail Sales) para a tabela `retail_sales`.
-4. Execute o script `02_view_tableau.sql` para gerar a visão limpa dos dados.
-5. Utilize os scripts em `03_business_queries.sql` para explorar os dados.
+![Dashboard Preview](./docs/dashboard_final.png)
+
+1.  **Sazonalidade:** Identificou-se um pico de vendas expressivo no mês de **Maio**, seguido por uma recuperação consistente no encerramento do ano.
+2.  **Mix de Categorias:** A categoria de **Electronics** lidera o faturamento, seguida de perto por Clothing e Beauty, indicando um portfólio de produtos equilibrado.
+3.  **Perfil Demográfico:** O público na faixa de **20-35 anos** representa a maior parcela do faturamento, sugerindo que estratégias de marketing digital devem ser priorizadas para este segmento.
+
+## 🏁 Como Utilizar este Repositório
+
+1.  Clone o projeto: `git clone https://github.com/Mpierredev/analise-vendas-sql.git`
+2.  Execute os scripts na pasta `/sql_scripts` na ordem numérica para recriar o banco de dados.
+3.  Abra o arquivo `./tableau/Retail_Sales_Performance_Analysis_v1.twbx` no Tableau Desktop para explorar a visualização de forma interativa.
+
+---
+*Projeto desenvolvido para fins de portfólio em Análise de Dados.*
