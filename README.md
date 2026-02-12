@@ -19,7 +19,6 @@ O projeto foi organizado seguindo as melhores práticas de engenharia de analyti
 * **Banco de Dados:** PostgreSQL (via DBeaver)
 * **Controle de Versão:** Git & GitHub
 * **Análise de Negócio:** SQL Avançado (Window Functions, CTEs, Aggregations)
-* **Visualização (Próximo Passo):** Tableau
 
 ## 📈 Insights Extraídos
 
@@ -34,6 +33,3 @@ O projeto foi organizado seguindo as melhores práticas de engenharia de analyti
 3. Importe o dataset (Kaggle Retail Sales) para a tabela `retail_sales`.
 4. Execute o script `02_view_tableau.sql` para gerar a visão limpa dos dados.
 5. Utilize os scripts em `03_business_queries.sql` para explorar os dados.
-
----
-*Status: Em desenvolvimento (Fase de Visualização de Dados pendente).*
