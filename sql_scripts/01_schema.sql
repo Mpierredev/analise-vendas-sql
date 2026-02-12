@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXISTS retail_sales (
+CREATE TABLE retail_sales (
     transaction_id INT PRIMARY KEY,
     sale_date DATE,
-    customer_id INT,
+    customer_id VARCHAR(50),
     gender VARCHAR(20),
     age INT,
     product_category VARCHAR(50),
